@@ -1,0 +1,110 @@
+[
+    {
+        "id": 1,
+        "title": "The Name of the Rose",
+        "author": "Umberto Eco",
+        "description": "A historical mystery set in an Italian monastery, blending philosophy and suspense.",
+        "category": "Story",
+        "available_quantity": 6,
+        "image_url": "https://example.com/images/name-of-the-rose.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Invisible Cities",
+        "author": "Italo Calvino",
+        "description": "A poetic journey through imaginary cities described by Marco Polo.",
+        "category": "Story",
+        "available_quantity": 5,
+        "image_url": "https://example.com/images/invisible-cities.jpg"
+    },
+    {
+        "id": 3,
+        "title": "If This Is a Man",
+        "author": "Primo Levi",
+        "description": "A powerful memoir of survival in a Nazi concentration camp.",
+        "category": "Science",
+        "available_quantity": 4,
+        "image_url": "https://example.com/images/if-this-is-a-man.jpg"
+    },
+    {
+        "id": 4,
+        "title": "My Brilliant Friend",
+        "author": "Elena Ferrante",
+        "description": "A story of friendship and life in post-war Naples.",
+        "category": "Story",
+        "available_quantity": 7,
+        "image_url": "https://example.com/images/my-brilliant-friend.jpg"
+    },
+    {
+        "id": 5,
+        "title": "Norwegian Wood",
+        "author": "Haruki Murakami",
+        "description": "A nostalgic story of love and loss set in Tokyo.",
+        "category": "Story",
+        "available_quantity": 8,
+        "image_url": "https://example.com/images/norwegian-wood.jpg"
+    },
+    {
+        "id": 6,
+        "title": "Kafka on the Shore",
+        "author": "Haruki Murakami",
+        "description": "A surreal tale blending reality, dreams, and metaphysics.",
+        "category": "Story",
+        "available_quantity": 6,
+        "image_url": "https://example.com/images/kafka-on-the-shore.jpg"
+    },
+    {
+        "id": 7,
+        "title": "The Sailor Who Fell from Grace with the Sea",
+        "author": "Yukio Mishima",
+        "description": "A dark story exploring youth, honor, and disillusionment.",
+        "category": "Story",
+        "available_quantity": 5,
+        "image_url": "https://example.com/images/sailor-sea.jpg"
+    },
+    {
+        "id": 8,
+        "title": "The Devotion of Suspect X",
+        "author": "Keigo Higashino",
+        "description": "A brilliant crime novel involving a genius mathematician.",
+        "category": "Tech",
+        "available_quantity": 9,
+        "image_url": "https://example.com/images/suspect-x.jpg"
+    },
+    {
+        "id": 9,
+        "title": "The Trial",
+        "author": "Franz Kafka",
+        "description": "A man is arrested and prosecuted by an unknown authority.",
+        "category": "Story",
+        "available_quantity": 6,
+        "image_url": "https://example.com/images/the-trial.jpg"
+    },
+    {
+        "id": 10,
+        "title": "Faust",
+        "author": "Johann Wolfgang von Goethe",
+        "description": "A scholar makes a pact with the devil in pursuit of knowledge.",
+        "category": "Story",
+        "available_quantity": 4,
+        "image_url": "https://example.com/images/faust.jpg"
+    },
+    {
+        "id": 11,
+        "title": "All Quiet on the Western Front",
+        "author": "Erich Maria Remarque",
+        "description": "A gripping story of soldiers during World War I.",
+        "category": "Story",
+        "available_quantity": 7,
+        "image_url": "https://example.com/images/all-quiet.jpg"
+    },
+    {
+        "id": 12,
+        "title": "The Metamorphosis",
+        "author": "Franz Kafka",
+        "description": "A man wakes up transformed into a giant insect.",
+        "category": "Story",
+        "available_quantity": 5,
+        "image_url": "https://example.com/images/metamorphosis.jpg"
+    }
+]
