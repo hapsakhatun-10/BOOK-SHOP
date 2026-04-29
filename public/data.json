@@ -6,7 +6,7 @@
         "description": "A historical mystery set in an Italian monastery, blending philosophy and suspense.",
         "category": "Story",
         "available_quantity": 6,
-        "image_url": "https://example.com/images/name-of-the-rose.jpg"
+        "image_url": "https://images.unsplash.com/photo-1519682337058-a94d519337bc"
     },
     {
         "id": 2,
@@ -15,7 +15,7 @@
         "description": "A poetic journey through imaginary cities described by Marco Polo.",
         "category": "Story",
         "available_quantity": 5,
-        "image_url": "https://example.com/images/invisible-cities.jpg"
+        "image_url": "https://images.unsplash.com/photo-1455885666463-6c8c0d2d2fdd"
     },
     {
         "id": 3,
@@ -24,7 +24,7 @@
         "description": "A powerful memoir of survival in a Nazi concentration camp.",
         "category": "Science",
         "available_quantity": 4,
-        "image_url": "https://example.com/images/if-this-is-a-man.jpg"
+        "image_url": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f"
     },
     {
         "id": 4,
@@ -33,7 +33,7 @@
         "description": "A story of friendship and life in post-war Naples.",
         "category": "Story",
         "available_quantity": 7,
-        "image_url": "https://example.com/images/my-brilliant-friend.jpg"
+        "image_url": "https://images.unsplash.com/photo-1512820790803-83ca734da794"
     },
     {
         "id": 5,
@@ -42,7 +42,7 @@
         "description": "A nostalgic story of love and loss set in Tokyo.",
         "category": "Story",
         "available_quantity": 8,
-        "image_url": "https://example.com/images/norwegian-wood.jpg"
+        "image_url": "https://images.unsplash.com/photo-1495446815901-a7297e633e8d"
     },
     {
         "id": 6,
@@ -51,7 +51,7 @@
         "description": "A surreal tale blending reality, dreams, and metaphysics.",
         "category": "Story",
         "available_quantity": 6,
-        "image_url": "https://example.com/images/kafka-on-the-shore.jpg"
+        "image_url": "https://images.unsplash.com/photo-1507842217343-583bb7270b66"
     },
     {
         "id": 7,
@@ -60,7 +60,7 @@
         "description": "A dark story exploring youth, honor, and disillusionment.",
         "category": "Story",
         "available_quantity": 5,
-        "image_url": "https://example.com/images/sailor-sea.jpg"
+        "image_url": "https://images.unsplash.com/photo-1519681393784-d120267933ba"
     },
     {
         "id": 8,
@@ -69,7 +69,7 @@
         "description": "A brilliant crime novel involving a genius mathematician.",
         "category": "Tech",
         "available_quantity": 9,
-        "image_url": "https://example.com/images/suspect-x.jpg"
+        "image_url": "https://images.unsplash.com/photo-1456324504439-367cee3b3c32"
     },
     {
         "id": 9,
@@ -78,7 +78,7 @@
         "description": "A man is arrested and prosecuted by an unknown authority.",
         "category": "Story",
         "available_quantity": 6,
-        "image_url": "https://example.com/images/the-trial.jpg"
+        "image_url": "https://images.unsplash.com/photo-1471879832106-c7ab9e0cee23"
     },
     {
         "id": 10,
@@ -87,7 +87,7 @@
         "description": "A scholar makes a pact with the devil in pursuit of knowledge.",
         "category": "Story",
         "available_quantity": 4,
-        "image_url": "https://example.com/images/faust.jpg"
+        "image_url": "https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d"
     },
     {
         "id": 11,
@@ -96,7 +96,7 @@
         "description": "A gripping story of soldiers during World War I.",
         "category": "Story",
         "available_quantity": 7,
-        "image_url": "https://example.com/images/all-quiet.jpg"
+        "image_url": "https://images.unsplash.com/photo-1464983953574-0892a716854b"
     },
     {
         "id": 12,
@@ -105,6 +105,6 @@
         "description": "A man wakes up transformed into a giant insect.",
         "category": "Story",
         "available_quantity": 5,
-        "image_url": "https://example.com/images/metamorphosis.jpg"
+        "image_url": "https://images.unsplash.com/photo-1524578271613-d550eacf6090"
     }
 ]
