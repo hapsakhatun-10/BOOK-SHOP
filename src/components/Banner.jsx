@@ -24,7 +24,19 @@ const Banner = () => {
                 <button className="bg-blue-600 px-6 py-3 rounded-lg hover:bg-blue-700 transition">
                     Browse Now
                 </button>
+
+
+
+                <button className="bg-blue-600 px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+                    Browse Now
+                </button>
             </div>
+
+
+
+
+
+
         </section>
     );
 };
