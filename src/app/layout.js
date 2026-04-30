@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${OutfitFont.className} h-full antialiased`}
     >
-      <body className="min-h-full  bg-blue-100 flex flex-col">
+      <body>
         <Navbar />
         {children}
         <Footer />

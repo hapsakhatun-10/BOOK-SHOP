@@ -6,7 +6,6 @@ const ALlPhotosPage = async () => {
     const allbooks = await res.json();
 
 
-    console.log(allbooks)
 
 
     return (
@@ -27,7 +26,7 @@ const ALlPhotosPage = async () => {
                         {allbooks.map((book) => (
                             <div
                                 key={book.id}
-                                className="rounded-xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 p-3"
+                                className="rounded  hover:shadow-lg hover:-translate-y-1 transition-all duration-300 p-3"
                             >
                                 <FeatureCard book={book} />
                             </div>

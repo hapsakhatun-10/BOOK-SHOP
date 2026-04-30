@@ -1,10 +1,10 @@
-import { Card, Button } from "@heroui/react";
+import { Card, Button, Link } from "@heroui/react";
 import Image from "next/image";
 
 const FeatureCard = ({ book }) => {
     return (
         <div>
-            <Card key={book.id} className="p-3 shadow-lg">
+            <Card key={book.id} className="p-3  bg-blue-50">
 
                 <div className="relative h-100">
                     <Image
@@ -23,9 +23,10 @@ const FeatureCard = ({ book }) => {
                         <p className="text-gray-600">
                             Author: {book.author}
                         </p>
+                        <Link href={`/all-books/${book.id}`}>
+                            <Button>View Details</Button>
 
-                        <Button>View Details</Button>
-
+                        </Link>
 
                     </div>
                 </div>
