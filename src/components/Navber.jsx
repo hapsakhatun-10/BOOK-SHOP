@@ -7,7 +7,7 @@ const Navbar = ({ isLoggedIn, user }) => {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <nav className="w-full bg-white shadow-md px-6 py-4 flex items-center justify-between">
+        <nav className="w-full  bg-blue-100 shadow-md px-6 py-4 flex items-center justify-between">
 
             <Link
                 href="/"
