@@ -1,5 +1,6 @@
-import { Card, Button } from "@heroui/react";
-import Image from "next/image";
+import FeatureCard from "./FeatureCard";
+
+
 
 const Featured = async () => {
     const res = await fetch(
@@ -24,32 +25,7 @@ const Featured = async () => {
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
                 {featuredBooks.map((book) => (
-                    <Card key={book.id} className="p-3 shadow-lg">
-
-                        <div className="relative h-100">
-                            <Image
-                                src={book.image_url}
-                                alt={book.title}
-                                fill
-                                className="object-cover rounded-xl"
-                            />
-                        </div>
-
-                        <div className="mt-3 space-y-1">
-                            <h2 className="text-lg font-semibold">
-                                {book.title}
-                            </h2>
-                            <div className="flex justify-between">
-                                <p className="text-gray-600">
-                                    Author: {book.author}
-                                </p>
-
-                                <Button>View Details</Button>
-
-
-                            </div>
-                        </div>
-                    </Card>
+                    <FeatureCard book={book} key={book.id} />
                 ))}
             </div>
         </div>

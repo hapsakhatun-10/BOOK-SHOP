@@ -106,5 +106,95 @@
         "category": "Story",
         "available_quantity": 5,
         "image_url": "/images/12.jpeg"
+    },
+    {
+        "id": 13,
+        "title": "1984",
+        "author": "George Orwell",
+        "description": "A dystopian novel about totalitarian regime and surveillance.",
+        "category": "Story",
+        "available_quantity": 6,
+        "image_url": "/images/13.jpg"
+    },
+    {
+        "id": 14,
+        "title": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "description": "A story of racial injustice in the American South.",
+        "category": "Story",
+        "available_quantity": 5,
+        "image_url": "/images/14.jpg"
+    },
+    {
+        "id": 15,
+        "title": "The Alchemist",
+        "author": "Paulo Coelho",
+        "description": "A journey of self-discovery and following dreams.",
+        "category": "Story",
+        "available_quantity": 8,
+        "image_url": "/images/15.jpeg"
+    },
+    {
+        "id": 16,
+        "title": "Sapiens",
+        "author": "Yuval Noah Harari",
+        "description": "A brief history of humankind from evolution to modern age.",
+        "category": "Science",
+        "available_quantity": 7,
+        "image_url": "/images/16.jpg"
+    },
+    {
+        "id": 17,
+        "title": "Clean Code",
+        "author": "Robert C. Martin",
+        "description": "A handbook of agile software craftsmanship.",
+        "category": "Tech",
+        "available_quantity": 6,
+        "image_url": "/images/17.jpeg"
+    },
+    {
+        "id": 18,
+        "title": "Atomic Habits",
+        "author": "James Clear",
+        "description": "An easy and proven way to build good habits.",
+        "category": "Science",
+        "available_quantity": 9,
+        "image_url": "/images/18.webp"
+    },
+    {
+        "id": 19,
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "description": "A tragic story of love and ambition in the Jazz Age.",
+        "category": "Story",
+        "available_quantity": 5,
+        "image_url": "/images/19.png"
+    },
+    {
+        "id": 20,
+        "title": "Deep Work",
+        "author": "Cal Newport",
+        "description": "A book about focused work and how to eliminate distractions to achieve high productivity.",
+        "category": "Self-Help",
+        "available_quantity": 8,
+        "image_url": "/images/20.jpeg"
+    },
+    {
+        "id": 21,
+        "title": "Prothom Alo",
+        "author": "Sunil Gangopadhyay",
+        "description": "A classic Bengali novel set in British India exploring revolution, love, and human struggle.",
+        "category": "Story",
+        "available_quantity": 7,
+        "image_url": "/images/21.jpg"
+    },
+    {
+        "id": 22,
+        "title": "Shesher Kobita",
+        "author": "Rabindranath Tagore",
+        "description": "A classic romantic novel exploring love, philosophy, and human emotions between Amit and Labanya.",
+        "category": "Story",
+        "available_quantity": 7,
+        "image_url": "/images/22.webp"
     }
 ]

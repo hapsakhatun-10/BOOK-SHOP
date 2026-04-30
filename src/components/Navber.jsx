@@ -18,7 +18,7 @@ const Navbar = ({ isLoggedIn, user }) => {
 
             <div className="hidden md:flex gap-8 text-gray-700 font-medium">
                 <Link href="/" className="hover:text-blue-600">Home</Link>
-                <Link href="/books" className="hover:text-blue-600">All Books</Link>
+                <Link href="/all-books" className="hover:text-blue-600">All Books</Link>
                 <Link href="/profile" className="hover:text-blue-600">My Profile</Link>
             </div>
 
