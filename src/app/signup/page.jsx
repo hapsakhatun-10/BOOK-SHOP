@@ -1,4 +1,5 @@
 "use client";
+import { Icon } from "@iconify/react";
 
 import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
@@ -43,8 +44,16 @@ const SignUp = () => {
 
         }
 
-        console.log("Signup success:", data);
     };
+
+
+    const handleGoogleSign = async () => {
+
+        const data = await authClient.signIn.social({
+            provider: "google",
+        });
+
+    }
 
     return (
         <Card className="border mx-auto w-full max-w-md py-10 mt-5">
@@ -100,6 +109,13 @@ const SignUp = () => {
                     </Button>
                 </div>
             </Form>
+
+            <Button onClick={handleGoogleSign}
+                className="w-full" variant="tertiary">
+                <Icon icon="devicon:google" />
+                Sign in with Google
+            </Button>
+
         </Card>
     );
 };
