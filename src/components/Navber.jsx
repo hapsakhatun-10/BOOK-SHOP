@@ -6,6 +6,9 @@ import { Avatar, Button } from "@heroui/react";
 import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
 
+
+
+
 const Navbar = () => {
 
     const router = useRouter();
@@ -16,8 +19,6 @@ const Navbar = () => {
     const handleSignOut = async () => {
         await authClient.signOut();
     };
-
-
 
     return (
         <div className="border-b  bg-blue-100 backdrop-blur-md sticky top-0 z-50">
