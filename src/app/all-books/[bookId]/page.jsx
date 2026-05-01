@@ -1,4 +1,4 @@
-import BookDetailsCard from "./BookDetailsCard.jsx/page";
+import BookDetailsCard from "./bookdetailscard/page";
 
 
 const BookDetailsPage = async ({ params }) => {

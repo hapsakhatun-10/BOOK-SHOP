@@ -23,14 +23,15 @@ const Navbar = () => {
     return (
         <div className="border-b  bg-blue-100 backdrop-blur-md sticky top-0 z-50">
             <nav className="flex justify-between items-center py-3 px-4 md:px-12 max-w-7xl mx-auto">
-                <div className="flex items-center gap-3">
-                    {/* Logo section */}
+                <Link href="/" className="flex items-center gap-3">
 
-                    <IoBookSharp className=" h-8 w-8" />
+                    <IoBookSharp className="h-8 w-8" />
+
                     <h2 className="font-extrabold text-2xl md:text-3xl tracking-wide text-black">
                         BOOKSHOP
                     </h2>
-                </div>
+
+                </Link>
 
                 {/* Links */}
                 <div className="hidden md:flex items-center gap-12 text-sm font-medium">
@@ -57,7 +58,7 @@ const Navbar = () => {
 
                 </div>
 
-                {/* Auth */}
+
                 <div className="flex items-center gap-6">
 
                     {!user && (

@@ -24,4 +24,19 @@ body {
   .links {
     @apply inline-block px-3 py-2 rounded-md hover:bg-blue-500 hover:text-white transition;
   }
+
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 15s linear infinite;
 }

@@ -1,123 +1,100 @@
 "use client";
-import { Icon } from "@iconify/react";
 
-import { authClient } from "@/lib/auth-client";
-import { Check } from "@gravity-ui/icons";
-import {
-    Button,
-    Card,
-    Description,
-    FieldError,
-    Form,
-    Input,
-    Label,
-    TextField,
-} from "@heroui/react";
-import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { IoBookSharp } from "react-icons/io5";
+import { FiMenu, FiX, FiLogOut } from "react-icons/fi";
+import Link from "next/link";
 
-const SignUp = () => {
-
-
-    const router = useRouter();
-
-
-    const onSubmit = async (e) => {
-        e.preventDefault();
-
-        const name = e.target.name.value;
-        const image = e.target.image.value;
-        const email = e.target.email.value;
-        const password = e.target.password.value;
-
-        console.log({ name, email, password, image });
-
-        const { data, error } = await authClient.signUp.email({
-            name,
-            email,
-            password,
-            image,
-        });
-
-        if (!error) {
-
-            router.push("/")
-
-        }
-
-    };
-
-
-    const handleGoogleSign = async () => {
-
-        const data = await authClient.signIn.social({
-            provider: "google",
-        });
-
-    }
+const Navbar = ({ user, router, handleSignOut, Avatar }) => {
+    const [open, setOpen] = useState(false);
 
     return (
-        <Card className="border mx-auto w-full max-w-md py-10 mt-5">
-            <h1 className="text-center text-2xl font-bold">Sign Up</h1>
+        <div className="border-b bg-blue-100 sticky top-0 z-50">
 
-            <Form
-                className="flex w-full max-w-sm mx-auto flex-col gap-4"
-                onSubmit={onSubmit}
-            >
-                <TextField isRequired name="name" type="text">
-                    <Label>Name</Label>
-                    <Input placeholder="Enter your name" />
-                    <FieldError />
-                </TextField>
+            <nav className="flex justify-between items-center py-3 px-4 md:px-12 max-w-7xl mx-auto">
 
-                <TextField isRequired name="image" type="text">
-                    <Label>Image URL</Label>
-                    <Input placeholder="Image URL" />
-                    <FieldError />
-                </TextField>
+                {/* LEFT SIDE (LOGO + MOBILE MENU BTN) */}
+                <div className="flex items-center gap-3">
 
-                <TextField
-                    isRequired
-                    name="email"
-                    type="email"
-                >
-                    <Label>Email</Label>
-                    <Input placeholder="john@example.com" />
-                    <FieldError />
-                </TextField>
+                    <IoBookSharp className="h-8 w-8" />
 
-                <TextField
-                    isRequired
-                    minLength={8}
-                    name="password"
-                    type="password"
-                >
-                    <Label>Password</Label>
-                    <Input placeholder="Enter your password" />
-                    <Description>
-                        Must be 8+ chars, 1 uppercase, 1 number
-                    </Description>
-                    <FieldError />
-                </TextField>
+                    <h2 className="font-extrabold text-2xl">BOOKSHOP</h2>
 
-                <div className="flex gap-2">
-                    <Button type="submit">
-                        <Check />
-                        Submit
-                    </Button>
-                    <Button type="reset" variant="secondary">
-                        Reset
-                    </Button>
+                    {/* MOBILE MENU BUTTON (RIGHT OF LOGO) */}
+                    <button
+                        className="md:hidden ml-2"
+                        onClick={() => setOpen(!open)}
+                    >
+                        {open ? <FiX size={22} /> : <FiMenu size={38} />}
+                    </button>
+
                 </div>
-            </Form>
 
-            <Button onClick={handleGoogleSign}
-                className="w-full" variant="tertiary">
-                <Icon icon="devicon:google" />
-                Sign in with Google
-            </Button>
+                {/* DESKTOP MENU */}
+                <div className="hidden md:flex items-center gap-10 text-sm font-medium">
+                    <Link href="/">Home</Link>
+                    <Link href="/all-books">All Books</Link>
+                    <Link href="/profile">Profile</Link>
+                </div>
 
-        </Card>
+                {/* DESKTOP AUTH */}
+                <div className="hidden md:flex items-center gap-5">
+
+                    {!user ? (
+                        <div className="flex gap-6 text-sm">
+                            <Link href="/signin">SignIn</Link>
+                            <Link href="/signup">SignUp</Link>
+                        </div>
+                    ) : (
+                        <div className="flex items-center gap-4">
+                            <Avatar
+                                onClick={() => router.push("/profile")}
+                                className="w-10 h-10 cursor-pointer"
+                            />
+                            <button onClick={handleSignOut}>
+                                Logout
+                            </button>
+                        </div>
+                    )}
+
+                </div>
+
+            </nav>
+
+            {/* MOBILE DROPDOWN MENU */}
+            {open && (
+                <div className="md:hidden flex flex-col gap-4 px-6 pb-4 border-t bg-blue-100 text-sm">
+
+                    <Link onClick={() => setOpen(false)} href="/">
+                        Home
+                    </Link>
+
+                    <Link onClick={() => setOpen(false)} href="/all-books">
+                        All Books
+                    </Link>
+
+                    <Link onClick={() => setOpen(false)} href="/profile">
+                        Profile
+                    </Link>
+
+                    {user && (
+                        <button
+                            onClick={() => {
+                                handleSignOut();
+                                setOpen(false);
+                            }}
+                            className="flex items-center gap-2 text-red-600"
+                        >
+                            <FiLogOut />
+                            Logout
+                        </button>
+                    )}
+
+                </div>
+            )}
+
+        </div>
     );
 };
 
-export default SignUp;
+export default Navbar;

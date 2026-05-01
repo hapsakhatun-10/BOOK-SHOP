@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Banner = () => {
     return (
         <section
@@ -8,10 +10,8 @@ const Banner = () => {
                 backgroundPosition: "center",
             }}
         >
-            {/* Overlay (important for readability) */}
             <div className="absolute inset-0 bg-black/60"></div>
 
-            {/* Content */}
             <div className="relative z-10 px-4 text-center">
                 <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
                     Find Your Next Read
@@ -21,10 +21,11 @@ const Banner = () => {
                     Explore and discover amazing books easily.
                 </p>
 
-                <button className="bg-blue-600 px-6 py-3 rounded-lg hover:bg-blue-700 transition">
-                    Browse Now
-                </button>
-
+                <Link href="/all-books">
+                    <button className="bg-blue-600 px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+                        Browse Now
+                    </button>
+                </Link>
             </div>
 
         </section>

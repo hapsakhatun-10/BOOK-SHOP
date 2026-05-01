@@ -50,7 +50,6 @@ const ProfilePage = () => {
 
                 </div>
 
-                {/* BOOKSHELVES */}
                 <div>
                     <h2 className="border-b pb-1 font-semibold text-sm uppercase">
                         {user.name} s bookshelves
@@ -64,7 +63,6 @@ const ProfilePage = () => {
                     </div>
                 </div>
 
-                {/* QUOTES */}
                 <div>
                     <h2 className="border-b pb-1 font-semibold text-sm uppercase flex justify-between">
                         Quotes
@@ -79,7 +77,7 @@ const ProfilePage = () => {
                     </p>
                 </div>
 
-                {/* COMMENTS */}
+
                 <div>
                     <h2 className="border-b pb-1 font-semibold text-sm uppercase">
                         Friend comments

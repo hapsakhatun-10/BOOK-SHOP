@@ -4,13 +4,11 @@ import Image from "next/image";
 const FeatureCard = ({ book }) => {
 
 
-
-
-
-
-
     return (
         <div>
+
+
+
             <Card key={book.id} className="p-3  bg-blue-50">
 
                 <div className="relative h-100">
