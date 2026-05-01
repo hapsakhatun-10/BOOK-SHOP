@@ -17,7 +17,6 @@ export default function BooksCategory({ books }) {
     return (
         <div className="flex flex-col md:flex-row gap-6 px-4 md:px-10 py-6">
 
-            {/* MOBILE BUTTON */}
             <div className="md:hidden">
                 <button
                     onClick={() => setOpen(true)}

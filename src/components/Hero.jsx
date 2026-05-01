@@ -4,7 +4,6 @@ const Hero = () => {
     return (
         <div className="relative w-full h-[450px] md:h-[550px] flex items-center justify-center text-white">
 
-            {/* Background Image */}
             <Image
                 src="/images/books3.avif"
                 alt="Hero Background"
@@ -13,10 +12,8 @@ const Hero = () => {
                 priority
             />
 
-            {/* Dark Overlay */}
             <div className="absolute inset-0 bg-black/50"></div>
 
-            {/* Content */}
             <div className="relative z-10 text-center px-4">
 
                 <h1 className="text-3xl md:text-5xl font-bold">

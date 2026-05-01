@@ -23,7 +23,6 @@ const Featured = async () => {
                 Handpicked books recommended for you. Explore top-rated stories, technology, and knowledge-filled reads.
             </p>
 
-            {/* MARQUEE */}
             <div className="overflow-hidden w-full">
 
                 <div className="flex w-max animate-scroll gap-6">

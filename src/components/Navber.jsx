@@ -33,7 +33,6 @@ const Navbar = () => {
 
                 </Link>
 
-                {/* Links */}
                 <div className="hidden md:flex items-center gap-12 text-sm font-medium">
                     <Link
                         className="links"

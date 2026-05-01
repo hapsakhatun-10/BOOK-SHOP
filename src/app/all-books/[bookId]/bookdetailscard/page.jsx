@@ -10,7 +10,6 @@ const BookDetailsCard = ({ book }) => {
 
             <div className="flex flex-col md:flex-row gap-6 md:gap-8 p-4 md:p-6 shadow-lg rounded-xl bg-amber-50 w-full max-w-4xl">
 
-                {/* IMAGE SECTION */}
                 <div className="shrink-0 p-3 rounded mx-auto md:mx-0">
 
                     <Image
@@ -25,7 +24,6 @@ const BookDetailsCard = ({ book }) => {
 
                 </div>
 
-                {/* DETAILS SECTION */}
                 <div className="flex-1 flex flex-col justify-center space-y-2 text-center md:text-left">
 
                     <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
