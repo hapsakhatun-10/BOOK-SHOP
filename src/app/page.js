@@ -5,14 +5,14 @@ import Marquee from "@/components/Marquee";
 export default function Home() {
   return (
     <>
-
-      <Banner />
-      <Marquee />
-      <Featured />
+      <div>
+        <Banner />
+        <Marquee />
+        <Featured />
+      </div>
     </>
   );
 }
 
 
 
-// https://book-shop-azure-beta.vercel.app/data.json

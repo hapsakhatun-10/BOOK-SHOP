@@ -1,3 +1,4 @@
+import { Button, Link } from "@heroui/react";
 import Image from "next/image";
 
 const BookDetailsPage = async ({ params }) => {
@@ -8,6 +9,9 @@ const BookDetailsPage = async ({ params }) => {
         { cache: "no-store" }
     );
 
+
+
+
     const books = await res.json();
 
     const book = books.find(b => b.id == bookId);
@@ -15,39 +19,61 @@ const BookDetailsPage = async ({ params }) => {
     return (
         <>
 
+            <div className="min-h-screen  flex items-center justify-center  md:px-20">
 
-            <div className="flex justify-center pt-6 gap-1">
+                <div className="flex  md:flex-row gap-8 p-6 shadow-lg rounded-xl bg-amber-50   max-w-4xl">
 
-                <Image
-                    src={book.image_url}
-                    alt="Book Cover"
-                    width={220}
-                    height={150}
-                    className="object-cover rounded mr-5 shadow"
-                />
+                    <div className="shrink-0 p-3  rounded mx-auto md:mx-0">
+                        <Image
+                            src={book.image_url}
+                            alt="Book Cover"
+                            width={180}
+                            height={240}
+                            className="rounded-md mb-4 object-cover"
+                        />
 
-                <div className="flex-1">
+                        <button className="btn bg-green-800 w-full text-white btn-success">Want to read</button>
+                    </div>
 
-                    <h2 className="text-lg font-semibold text-gray-900">
-                        {book.title}
-                    </h2>
+                    <div className="flex-1 flex flex-col justify-center space-y-2 text-right md:text-left">
 
-                    <p className="text-sm text-gray-700">
-                        by <span className="font-medium">{book.author}</span>
-                    </p>
+                        <h2 className="text-3xl font-bold text-gray-900">
+                            {book.title}
+                        </h2>
 
-                    <span className="text-xs text-gray-500 block mt-1">
-                        Rate it: ☆ ☆ ☆ ☆ ☆
-                    </span>
+                        <p className="text-lg text-gray-900">
+                            by <span className="font-medium text-gray-800">{book.author}</span>
+                        </p>
 
-                    <p className="text-xs text-gray-600 mt-2">
-                        {book.description}
-                    </p>
+                        <span className="text- text-sm">
+                            ★ ★ ★ ★ ★
+                        </span>
+
+                        <p className="text-sm text-gray-600 leading-relaxed">
+                            {book.description}
+                        </p>
+
+                        <p className="text-sm text-gray-600">
+                            <span className="font-medium">Category:</span> {book.category}
+                        </p>
+
+                        <p className="text-sm text-gray-600">
+                            <span className="font-medium">Quantity:</span> {book.available_quantity}
+                        </p>
+
+                        <div className="pt-3">
+                            <Link href="/mybooks">
+                                <Button className=" hover:bg-green-400  bg-green-800 px-5 py-2 rounded-md transition">
+                                    Add to List
+                                </Button>
+                            </Link>
+                        </div>
+
+                    </div>
 
                 </div>
 
             </div>
-
 
         </>
 

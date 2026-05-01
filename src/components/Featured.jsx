@@ -16,8 +16,9 @@ const Featured = async () => {
 
 
     return (
-        <div className="p-6">
-            <h2 className="text-2xl font-bold mb-6">
+        <div className="p-6 px-6 lg:px-[220px]">
+
+            <h2 className="text-2xl font-bold text-center mb-6">
                 Featured Books
             </h2>
 

@@ -6,14 +6,14 @@ import { Avatar } from "@heroui/react";
 import { Icon } from "@iconify/react";
 
 const ProfilePage = () => {
-    const { data, isPending } = authClient.useSession();
+    const { data } = authClient.useSession();
     const user = data?.user;
 
-    if (isPending) return <p className="text-center mt-10">Loading...</p>;
+
     if (!user) return <p className="text-center mt-10">Not logged in</p>;
 
     return (
-        <div className="max-w-6xl mx-auto p-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="max-w-6xl mx-auto p-6  bg-amber-50 grid grid-cols-1 md:grid-cols-3 gap-8">
 
             <div className="md:col-span-2 space-y-6">
 
@@ -53,7 +53,7 @@ const ProfilePage = () => {
                 {/* BOOKSHELVES */}
                 <div>
                     <h2 className="border-b pb-1 font-semibold text-sm uppercase">
-                        {user.name} 's bookshelves
+                        {user.name} s bookshelves
                     </h2>
 
                     <div className="flex gap-6 mt-2 text-blue-600 text-sm">

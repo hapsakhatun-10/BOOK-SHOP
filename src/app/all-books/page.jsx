@@ -1,6 +1,11 @@
 import FeatureCard from "@/components/FeatureCard";
 
-const ALlPhotosPage = async () => {
+const AllBooksPage = async ({ searchParams }) => {
+
+    const { categories } = await searchParams;
+
+
+
     const res = await fetch("https://book-shop-azure-beta.vercel.app/data.json")
 
     const allbooks = await res.json();
@@ -39,4 +44,4 @@ const ALlPhotosPage = async () => {
     );
 };
 
-export default ALlPhotosPage;
+export default AllBooksPage;

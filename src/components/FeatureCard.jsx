@@ -2,6 +2,13 @@ import { Card, Button, Link } from "@heroui/react";
 import Image from "next/image";
 
 const FeatureCard = ({ book }) => {
+
+
+
+
+
+
+
     return (
         <div>
             <Card key={book.id} className="p-3  bg-blue-50">
@@ -24,7 +31,7 @@ const FeatureCard = ({ book }) => {
                             Author: {book.author}
                         </p>
                         <Link href={`/all-books/${book.id}`}>
-                            <Button>View Details</Button>
+                            <Button>View</Button>
 
                         </Link>
 
