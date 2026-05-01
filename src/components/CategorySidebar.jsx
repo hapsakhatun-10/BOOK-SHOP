@@ -12,7 +12,7 @@ export default function CategorySidebar({ onSelect }) {
     };
 
     return (
-        <div className=" shadow-md rounded-xl p-4 sticky top-5">
+        <div className=" shadow-lg rounded-xl bg-blue-200 p-4 h-full w-full sticky top-5">
             <h2 className="text-2xl font-semibold mb-4">Categories</h2>
 
             <ul className="flex flex-col text-center gap-2">

@@ -1,41 +1,48 @@
-import { Card, Button, Link } from "@heroui/react";
 import Image from "next/image";
+import Link from "next/link";
 
 const FeatureCard = ({ book }) => {
-
-
     return (
-        <div>
+        <div className="h-full w-full">
 
+            <div className="bg-blue-50 rounded-xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col h-full overflow-hidden">
 
-
-            <Card key={book.id} className="p-3  bg-blue-50">
-
-                <div className="relative h-100">
+                {/* IMAGE */}
+                <div className="relative w-full h-52 sm:h-56 md:h-64">
                     <Image
                         src={book.image_url}
                         alt={book.title}
                         fill
-                        className="object-cover rounded-xl"
+                        className="object-cover"
                     />
                 </div>
 
-                <div className="mt-3 space-y-1">
-                    <h2 className="text-lg font-semibold">
+                {/* CONTENT */}
+                <div className="p-4 flex flex-col flex-1">
+
+                    <h2 className="text-base sm:text-lg font-semibold line-clamp-2">
                         {book.title}
                     </h2>
-                    <div className="flex justify-between">
-                        <p className="text-gray-600">
-                            Author: {book.author}
-                        </p>
-                        <Link href={`/all-books/${book.id}`}>
-                            <Button>View</Button>
+
+                    <p className="text-gray-600 text-sm mt-1">
+                        Author: {book.author}
+                    </p>
+
+                    {/* BUTTON */}
+                    <div className="mt-auto pt-4">
+                        <Link href={`/all-books/${book.id}`} className="block w-full">
+
+                            <button className="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-lg transition text-sm sm:text-base">
+                                View
+                            </button>
 
                         </Link>
-
                     </div>
+
                 </div>
-            </Card>
+
+            </div>
+
         </div>
     );
 };
