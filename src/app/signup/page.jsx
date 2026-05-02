@@ -48,7 +48,7 @@ const SignUp = () => {
     };
 
     return (
-        <Card className="border mx-auto w-full max-w-md py-10 mt-5">
+        <Card className=" mx-auto w-full max-w-md py-10 ">
             <h1 className="text-center text-2xl font-bold">Sign Up</h1>
 
             <Form
@@ -100,7 +100,14 @@ const SignUp = () => {
                         Reset
                     </Button>
                 </div>
+                <p className="text-center text-sm mt-4 text-gray-600">
+                    Already have an account?{" "}
+                    <a href="/signin" className="text-blue-500 underline">
+                        Sign In
+                    </a>
+                </p>
             </Form>
+
         </Card>
     );
 };

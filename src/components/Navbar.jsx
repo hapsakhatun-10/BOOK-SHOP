@@ -17,7 +17,13 @@ const Navbar = () => {
     const user = userData.data?.user;
 
     const handleSignOut = async () => {
-        await authClient.signOut();
+        await authClient.signOut({
+            fetchOptions: {
+                onSuccess: () => {
+                    router.push("/signin");
+                },
+            },
+        });
     };
 
     return (

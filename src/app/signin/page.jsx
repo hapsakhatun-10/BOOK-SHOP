@@ -1,7 +1,6 @@
 "use client";
 
 import { Icon } from "@iconify/react";
-
 import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
 import {
@@ -15,10 +14,9 @@ import {
     TextField,
 } from "@heroui/react";
 import toast from "react-hot-toast";
+import Link from "next/link";
 
 const SignIn = () => {
-
-
 
     const onSubmit = async (e) => {
         e.preventDefault();
@@ -26,40 +24,30 @@ const SignIn = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
 
-        console.log({ email, password, });
-
-        const { data, error } = await authClient.signIn.email({
-
+        const { error } = await authClient.signIn.email({
             email,
             password,
-
-            callbackURL: '/'
-
+            callbackURL: "/",
         });
 
-        if (!error) {
-            router.push("/signin")
-        } else {
-            toast.error(error.message)
+        if (error) {
+            toast.error(error.message);
         }
     };
 
-
-
-
     const handleGoogleSign = async () => {
-
-        const { data, error } = await authClient.signIn.social({
+        const { error } = await authClient.signIn.social({
             provider: "google",
         });
 
         if (error) {
-            toast.error(error.message)
+            toast.error(error.message);
         }
-    }
+    };
 
     return (
-        <Card className="border mx-auto w-full max-w-md py-10 mt-5">
+        <Card className=" mx-auto w-full max-w-md py-10 ">
+
             <h1 className="text-center text-2xl font-bold">Sign In</h1>
 
             <Form
@@ -67,22 +55,13 @@ const SignIn = () => {
                 onSubmit={onSubmit}
             >
 
-                <TextField
-                    isRequired
-                    name="email"
-                    type="email"
-                >
+                <TextField isRequired name="email" type="email">
                     <Label>Email</Label>
                     <Input placeholder="john@example.com" />
                     <FieldError />
                 </TextField>
 
-                <TextField
-                    isRequired
-                    minLength={8}
-                    name="password"
-                    type="password"
-                >
+                <TextField isRequired minLength={8} name="password" type="password">
                     <Label>Password</Label>
                     <Input placeholder="Enter your password" />
                     <Description>
@@ -100,11 +79,26 @@ const SignIn = () => {
                         Reset
                     </Button>
                 </div>
+
             </Form>
-            <Button onClick={handleGoogleSign} className="w-full" variant="tertiary">
+
+            <Button
+                onClick={handleGoogleSign}
+                className="w-full mt-4"
+                variant="tertiary"
+            >
                 <Icon icon="devicon:google" />
                 Sign in with Google
             </Button>
+
+
+            <p className="text-center text-sm mt-4 text-gray-600">
+                Dont have an account?{" "}
+                <Link href="/signup" className="text-blue-500 underline">
+                    Sign Up
+                </Link>
+            </p>
+
         </Card>
     );
 };
