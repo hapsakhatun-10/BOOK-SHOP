@@ -3,12 +3,7 @@ import { auth } from "@/lib/auth";
 
 export async function proxy(request) {
 
-    // console.log("proxy running");
-
     const pathname = request.nextUrl?.pathname ?? "";
-    console.log("proxy: ", pathname);
-
-
     const session = await auth.api.getSession({
         headers: request.headers,
     });
