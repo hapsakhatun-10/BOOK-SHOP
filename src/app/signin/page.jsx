@@ -22,7 +22,6 @@ const SignIn = () => {
     const onSubmit = async (e) => {
         e.preventDefault();
 
-
         const email = e.target.email.value;
         const password = e.target.password.value;
 
@@ -37,16 +36,8 @@ const SignIn = () => {
 
         });
 
-
-
-
-
-
-
         if (!error) {
             router.push("/signin")
-
-
         }
     };
 
@@ -58,6 +49,8 @@ const SignIn = () => {
         const data = await authClient.signIn.social({
             provider: "google",
         });
+
+        console.log(data)
 
     }
 

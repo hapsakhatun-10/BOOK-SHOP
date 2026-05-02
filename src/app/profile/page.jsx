@@ -9,7 +9,6 @@ const ProfilePage = () => {
     const { data } = authClient.useSession();
     const user = data?.user;
 
-
     if (!user) return <p className="text-center mt-10">Not logged in</p>;
 
     return (
@@ -20,12 +19,13 @@ const ProfilePage = () => {
                 <div className="flex gap-6">
 
                     <Avatar
-                        src={user.image}
-                        name={user.name}
-                        className="w-28 h-28 text-2xl"
-                        referrerPolicy="no-referrer"
-
-                    />
+                        className="w-28 h-28 ring-2 ring-blue-500"
+                    >
+                        <Avatar.Image src={user?.image} />
+                        <Avatar.Fallback className="bg-gray-200 text-black">
+                            {user?.name?.charAt(0)}
+                        </Avatar.Fallback>
+                    </Avatar>
 
                     <div>
                         <h1 className="text-2xl font-bold flex items-center gap-2">
