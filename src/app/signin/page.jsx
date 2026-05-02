@@ -14,6 +14,7 @@ import {
     Label,
     TextField,
 } from "@heroui/react";
+import toast from "react-hot-toast";
 
 const SignIn = () => {
 
@@ -38,6 +39,8 @@ const SignIn = () => {
 
         if (!error) {
             router.push("/signin")
+        } else {
+            toast.error(error.message)
         }
     };
 
@@ -46,12 +49,13 @@ const SignIn = () => {
 
     const handleGoogleSign = async () => {
 
-        const data = await authClient.signIn.social({
+        const { data, error } = await authClient.signIn.social({
             provider: "google",
         });
 
-        console.log(data)
-
+        if (error) {
+            toast.error(error.message)
+        }
     }
 
     return (
