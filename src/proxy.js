@@ -1,0 +1,29 @@
+import { NextResponse } from "next/server";
+import { auth } from "@/lib/auth";
+
+export async function proxy(request) {
+
+    // console.log("proxy running");
+
+    const pathname = request.nextUrl?.pathname ?? "";
+    console.log("proxy: ", pathname);
+
+
+    const session = await auth.api.getSession({
+        headers: request.headers,
+    });
+
+    const isProtected =
+        pathname.startsWith("/profile") ||
+        pathname.startsWith("/all-books");
+
+    if (isProtected && !session) {
+        return NextResponse.redirect(new URL("/signin", request.url));
+    }
+
+    return NextResponse.next();
+}
+
+export const config = {
+    matcher: ["/profile/:path*", "/all-books/:path*"],
+};
